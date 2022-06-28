@@ -1,6 +1,18 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+  const checkedNumbers = new Set();
+
+
+  for (const number of array) {
+   const compl = target - number;
+    if (checkedNumbers.has(compl)) {
+      return true}
+    else {
+      checkedNumbers.add(number)
+  }
+    }
+  console.log('checkedNumbers',checkedNumbers)
+    return false
+  }
 
 /* 
   Write the Big O time complexity of your function here
